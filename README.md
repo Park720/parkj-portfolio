@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Junhyung Park — Portfolio
 
-## Getting Started
+Personal portfolio site built with **Next.js 15**, deployed on **Vercel**.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** JavaScript
+- **Styling:** Plain CSS (CSS variables, no Tailwind)
+- **Deploy:** Vercel + GitHub
+
+---
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── globals.css       # All styles + CSS variables
+│   ├── layout.js         # Root layout + metadata
+│   └── page.js           # Main page (assembles all sections)
+└── components/
+    ├── Navbar.js          # Sticky nav with scroll-based active tab
+    └── sections/
+        ├── HomeSection.js
+        ├── AboutSection.js
+        ├── ProjectsSection.js
+        ├── SkillsSection.js
+        └── ContactSection.js
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Deploy (Vercel)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push this repo to GitHub
+2. Go to [vercel.com](https://vercel.com) → **Add New Project**
+3. Import the GitHub repo
+4. Leave all settings as default — Vercel auto-detects Next.js
+5. Click **Deploy**
 
-## Deploy on Vercel
+Every `git push` to `main` will auto-deploy.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Customizing Content
+
+All content is in the section files under `src/components/sections/`.
+
+| File | What to edit |
+|------|-------------|
+| `HomeSection.js` | Name, tagline, featured project |
+| `AboutSection.js` | Bio, stats, interests |
+| `ProjectsSection.js` | Project list (title, type, engine, desc) |
+| `SkillsSection.js` | Skill percentages, tools, game design tags |
+| `ContactSection.js` | Email, GitHub, LinkedIn, availability |
+
+To add a real photo, replace the `<div className="about-photo">` with an `<Image>` tag.  
+To add project screenshots, replace the `<div className="project-card-img">` with `<Image>`.
+
+---
+
+## Adding a Resume
+
+Place your resume PDF at `public/resume.pdf` — the download button in Contact is already wired up.

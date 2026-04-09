@@ -1,7 +1,7 @@
 const STATS = [
   { key: 'Major',  val: 'Game Development' },
   { key: 'School', val: 'Purdue University' },
-  { key: 'Year',   val: 'Sophomore' },
+  { key: 'Year',   val: 'Junior' },
   { key: 'Focus',  val: 'Unity · Unreal' },
 ];
 

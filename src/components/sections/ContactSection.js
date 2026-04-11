@@ -1,7 +1,7 @@
 const CONTACTS = [
-  { label: 'Email',    val: 'park1173@purdue.edu',          href: 'mailto:park1173@purdue.edu' },
-  { label: 'GitHub',   val: 'github.com/Park720',      href: 'https://github.com/Park720' },
-  { label: 'LinkedIn', val: 'linkedin.com/in/june-park-09b0b1390/', href: 'https://linkedin.com/in/june-park-09b0b1390/' },
+  { label: 'Email',    val: 'park1472@purdue.edu',          href: 'mailto:park1472@purdue.edu' },
+  { label: 'GitHub',   val: 'github.com/junhyungpark',      href: 'https://github.com' },
+  { label: 'LinkedIn', val: 'linkedin.com/in/junhyungpark', href: 'https://linkedin.com' },
   { label: 'itch.io',  val: 'junhyungpark.itch.io',         href: 'https://itch.io' },
 ];
 
